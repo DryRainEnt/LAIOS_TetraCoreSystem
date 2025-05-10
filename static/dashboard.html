@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SoulCube 대시보드</title>
+  <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SoulCube 작동 현황 대시보드</h1>
+    <form id="inputForm">
+      <input type="text" id="userInput" placeholder="메시지 입력" required>
+      <button type="submit">전송</button>
+    </form>
+    <div id="flow">
+      <div class="step"><strong>입력 요약:</strong> <span id="summary"></span></div>
+      <div class="step">
+  <strong>논리 판단:</strong> <span id="logos"></span>
+  <button class="settings-btn" data-agent="logos">⚙️ 설정</button>
+</div>
+<div class="step">
+  <strong>감정 판단:</strong> <span id="pathos"></span>
+  <button class="settings-btn" data-agent="pathos">⚙️ 설정</button>
+</div>
+<div class="step">
+  <strong>윤리 판단:</strong> <span id="ethos"></span>
+  <button class="settings-btn" data-agent="ethos">⚙️ 설정</button>
+</div>
+
+<!-- 설정 모달 -->
+<div id="settingsModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2 id="modalTitle">에이전트 설정</h2>
+    <form id="settingsForm">
+      <label for="modelSelect">모델 선택:</label>
+      <select id="modelSelect" name="model">
+        <option value="gpt-3.5-turbo">OpenAI GPT-3.5 Turbo</option>
+        <option value="gpt-4">OpenAI GPT-4</option>
+        <option value="claude-3-opus">Anthropic Claude 3 Opus</option>
+        <option value="claude-3-sonnet">Anthropic Claude 3 Sonnet</option>
+      </select>
+      <br><br>
+      <label for="apiKeyInput">API Key:</label>
+      <input type="password" id="apiKeyInput" name="apiKey" placeholder="API Key 입력" required>
+      <br><br>
+      <button type="submit">저장</button>
+    </form>
+  </div>
+</div>
+      <div class="step"><strong>기억 조회:</strong> <span id="memory"></span></div>
+      <div class="step"><strong>감각 분석:</strong> <span id="sensation"></span></div>
+      <div class="step"><strong>행동 계획:</strong> <span id="action_plan"></span></div>
+      <div class="step"><strong>MCP 호출:</strong> <span id="mcp_result"></span></div>
+    </div>
+  </div>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

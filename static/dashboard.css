@@ -1,0 +1,23 @@
+body { font-family: 'Segoe UI', sans-serif; background: #f6f7fb; }
+.container { max-width: 600px; margin: 40px auto; background: #fff; padding: 2em 2.5em; border-radius: 12px; box-shadow: 0 2px 12px #0001; }
+h1 { text-align: center; color: #333; }
+form { display: flex; gap: 8px; margin-bottom: 2em; }
+input[type="text"] { flex: 1; padding: 0.7em; border: 1px solid #bbb; border-radius: 6px; }
+button { padding: 0.7em 1.5em; background: #2a78e4; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+button:hover { background: #1557a6; }
+#flow { margin-top: 1.5em; }
+.step { margin: 0.5em 0; padding: 0.8em 1em; background: #f1f4fa; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
+.step strong { color: #2a78e4; }
+.settings-btn { margin-left: auto; background: #e7f0fd; border: 1px solid #2a78e4; color: #2a78e4; border-radius: 5px; padding: 0.3em 0.9em; cursor: pointer; font-size: 1em; }
+.settings-btn:hover { background: #d0e3fa; }
+
+/* 모달 스타일 */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100vw; height: 100vh; overflow: auto; background: rgba(0,0,0,0.25); }
+.modal-content { background: #fff; margin: 8% auto; padding: 2em 2.5em; border-radius: 12px; width: 350px; box-shadow: 0 2px 16px #0002; position: relative; }
+.close { position: absolute; top: 16px; right: 24px; font-size: 1.4em; cursor: pointer; color: #888; }
+.close:hover { color: #2a78e4; }
+#settingsForm label { font-weight: bold; }
+#settingsForm input[type="password"] { width: 100%; padding: 0.5em; margin-top: 0.3em; border: 1px solid #bbb; border-radius: 5px; }
+#settingsForm select { width: 100%; padding: 0.5em; border: 1px solid #bbb; border-radius: 5px; }
+#settingsForm button[type="submit"] { margin-top: 1em; width: 100%; background: #2a78e4; color: #fff; border: none; border-radius: 6px; padding: 0.7em 0; font-size: 1.1em; cursor: pointer; }
+#settingsForm button[type="submit"]:hover { background: #1557a6; }
